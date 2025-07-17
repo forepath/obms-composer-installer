@@ -1,0 +1,36 @@
+{
+    "name": "forepath/obms-composer-installer",
+    "type": "composer-installer",
+    "description": "The OBMS package installer.",
+    "keywords": ["obms", "open business management software"],
+    "license": "Apache-2.0",
+    "homepage": "https://forepath.io",
+    "support": {
+        "docs": "https://forepath.io/docs/obms",
+        "email": "support@forepath.io",
+        "issues": "https://github.com/forepath/obms-composer-installer/issues",
+        "source": "https://github.com/forepath/obms-composer-installer"
+    },
+    "require": {
+        "php": "^8.2",
+        "composer/installers": "~2.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.13",
+        "phpstan/phpstan": "^1.10",
+        "composer/composer": "2.0.*@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "OBMS\\Composer\\Installer\\": "src/"
+        }
+    },
+    "extra": {
+        "class": "OBMS\\Composer\\Installer\\Installer"
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    }
+}
